@@ -17,7 +17,9 @@ docker compose up -d
 
 On same evironment, start a internet browser and open this URL:
 
+```bash
 http://localhost:4200
+```
 
 Set the numbers on the two fields and click the button bellow.
 After at most five seconds the result of sum operation is showed on a table at the bottom.
