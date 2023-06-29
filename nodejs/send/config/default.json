@@ -1,0 +1,17 @@
+{
+    "webserver": {
+      "host": "client",
+      "port": 3000
+    },
+    "rabbitmq": {
+        "host": "rabbitmq",
+        "port": 5672
+    },
+    "mongodb": {
+        "database": "local",
+        "host": "mongo",
+        "port": 27017,
+        "user": "root",
+        "password": "example"
+    }
+}

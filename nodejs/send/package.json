@@ -1,0 +1,19 @@
+{
+  "name": "create",
+  "version": "1.0.0",
+  "description": "Creates calculation message and database record",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Dieter Santos",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "body-parser": "^1.20.2",
+    "config": "^3.3.9",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^7.3.1"
+  }
+}

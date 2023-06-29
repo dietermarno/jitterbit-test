@@ -1,0 +1,58 @@
+version: "2"
+services:
+  mongo:
+    container_name: mongo-database
+    image: mongo:4
+    hostname: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports:
+      - 27017:27017
+    networks:
+      - dockerhost
+  rabbitmq:
+    container_name: rabbit-mq
+    image: rabbitmq:3
+    hostname: rabbitmq
+    ports:
+      - 5672:5672
+    networks:
+      - dockerhost
+  send:
+    container_name: send-mongo-rabbitmq
+    image: dietermarno/jitterbit-send
+    hostname: send
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+      - rabbitmq
+    networks:
+      - dockerhost
+  receive:
+    container_name: receive-rabbitmq-save-mongo
+    image: dietermarno/receive
+    hostname: receive
+    depends_on:
+      - mongo
+      - rabbitmq
+    networks:
+      - dockerhost
+  client:
+    container_name: front-end
+    image: dietermarno/jitterbit-client
+    hostname: client
+    ports:
+      - "4200:4200"
+    depends_on:
+      - mongo
+      - rabbitmq
+      - send
+    networks:
+      - dockerhost
+networks:
+  dockerhost:
+    driver: bridge
+    name: jitterbitnet

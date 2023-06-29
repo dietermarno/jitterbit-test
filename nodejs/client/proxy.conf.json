@@ -1,0 +1,7 @@
+{
+    "/*": {
+        "target": "http://send:3000",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
