@@ -25,7 +25,7 @@ Set the numbers on the two fields and click the button bellow.
 After at most five seconds the result of sum operation is showed on a table at the bottom.
 The newest results are shown at the top of the table.
 
-## Improvements
+## To do list
 
 Implementation of JWT token on the send-mongo-rabbitmq (API) and front-end (client) applications.\
 Authentication to access RabbitMQ send-mongo-rabbit (API) and receive-rabbitmq-save-mongo (worker).\
