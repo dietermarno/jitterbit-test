@@ -16,6 +16,7 @@ services:
     container_name: rabbit-mq
     image: rabbitmq:3
     hostname: rabbitmq
+    restart: always
     ports:
       - 5672:5672
     networks:
@@ -24,6 +25,7 @@ services:
     container_name: send-mongo-rabbitmq
     image: dietermarno/jitterbit-send
     hostname: send
+    restart: always
     ports:
       - 3000:3000
     depends_on:
@@ -35,6 +37,7 @@ services:
     container_name: receive-rabbitmq-save-mongo
     image: dietermarno/receive
     hostname: receive
+    restart: always
     depends_on:
       - mongo
       - rabbitmq
@@ -44,6 +47,7 @@ services:
     container_name: front-end
     image: dietermarno/jitterbit-client
     hostname: client
+    restart: always
     ports:
       - "4200:4200"
     depends_on:
