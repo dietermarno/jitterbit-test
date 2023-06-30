@@ -35,6 +35,7 @@ services:
     container_name: receive-rabbitmq-save-mongo
     image: dietermarno/receive
     hostname: receive
+    restart: always
     depends_on:
       - mongo
       - rabbitmq
