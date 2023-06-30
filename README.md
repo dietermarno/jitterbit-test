@@ -7,7 +7,7 @@ API, queue service, data process service and non-relational  database storage.
 ## Installation
 
 You need a evironment running Docker Engine version 24.0.2 or higher.
-To run project you need start docker compose with the following commmand in project root directory: 
+To run project you need start docker compose from the PowerShell prompt with the following commmand in root project directory: 
 
 ```bash
 docker compose up -d
