@@ -27,12 +27,12 @@ The newest results are shown at the top of the table.
 
 ## Improvements
 
-Implementation of JWT token on the send-mongo-rabbitmq (API) and front-end (client) applications.
-Authentication to access RabbitMQ send-mongo-rabbit (API) and receive-rabbitmq-save-mongo (worker).
-Setup of CORS origin on send-mongo-rabbit (API) application.
-Standardization of parameters on all applications.
-Implementation of standardized logs in all applications.
-Code refactoring to determinate and apply design patterns where ists needed. 
-Planning of access ports exposition on docker containers.
-Unitary tests.
-Documentation.
+#Implementation of JWT token on the send-mongo-rabbitmq (API) and front-end (client) applications.
+#Authentication to access RabbitMQ send-mongo-rabbit (API) and receive-rabbitmq-save-mongo (worker).
+#Setup of CORS origin on send-mongo-rabbit (API) application.
+#Standardization of parameters on all applications.
+#Implementation of standardized logs in all applications.
+#Code refactoring to determinate and apply design patterns where ists needed. 
+#Planning of access ports exposition on docker containers.
+#Unitary tests.
+#Documentation.
