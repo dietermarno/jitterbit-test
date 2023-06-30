@@ -4,7 +4,6 @@ services:
     container_name: mongo-database
     image: mongo:4
     hostname: mongo
-    restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
@@ -45,6 +44,7 @@ services:
     container_name: front-end
     image: dietermarno/jitterbit-client
     hostname: client
+    restart: always
     ports:
       - "4200:4200"
     depends_on:
