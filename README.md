@@ -35,4 +35,4 @@ Implementation of standardized logs in all applications.\
 Code refactoring to determinate and apply design patterns where ists needed.\
 Planning of access ports exposition on docker containers.\
 Unitary tests.\
-Documentation.\
+Documentation.
