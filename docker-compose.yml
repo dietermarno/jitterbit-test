@@ -4,6 +4,7 @@ services:
     container_name: mongo-database
     image: mongo:4
     hostname: mongo
+    restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
@@ -15,6 +16,7 @@ services:
     container_name: rabbit-mq
     image: rabbitmq:3
     hostname: rabbitmq
+    restart: always
     ports:
       - 5672:5672
     networks:
@@ -23,6 +25,7 @@ services:
     container_name: send-mongo-rabbitmq
     image: dietermarno/jitterbit-send
     hostname: send
+    restart: always
     ports:
       - 3000:3000
     depends_on:
